@@ -1,30 +1,136 @@
-<!-- SOCIAL LINKS -->
-<section class="section" style="text-align:center; margin-top:40px;">
-  <h2 style="color:#fff;">Follow HealAid Chain</h2>
-  <div style="display:flex;flex-wrap:wrap;gap:15px;justify-content:center;margin-top:20px;">
-    <a href="https://x.com/HLAIDTN/status/1953438207783129577" target="_blank" class="btn">Twitter / X</a>
-    <a href="https://www.instagram.com/healaidchain?igsh=dHIyMzBrancybDBu" target="_blank" class="btn">Instagram</a>
-    <a href="https://www.threads.com/@healaidchain" target="_blank" class="btn">Threads</a>
-    <a href="https://open.kakao.com/o/gZ1HnDJh" target="_blank" class="btn">KakaoTalk</a>
-    <a href="https://t.me/healaidchainofficial" target="_blank" class="btn">Telegram</a>
-    <a href="https://youtube.com/@hlaid_official?si=D6PA-kkujd2mVczW" target="_blank" class="btn">YouTube</a>
-    <a href="https://healaidchain.github.io/" target="_blank" class="btn">Official Website</a>
-    <a href="https://healaidchain.gitbook.io/healaidchain-docs/" target="_blank" class="btn">Whitepaper</a>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HealAid Chain</title>
 
-<style>
-.btn {
-  display:inline-block;
-  padding:10px 16px;
-  background:linear-gradient(180deg,#4185f4,#2c62b9);
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-  transition:background 0.3s;
-}
-.btn:hover {
-  background:linear-gradient(180deg,#2c62b9,#1a3d7c);
-}
-</style>
+  <!-- Inline minimalist styles -->
+  <style>
+    :root{
+      --bg:#0b1220; --panel:#111a2b; --muted:#9bb3cf; --text:#e6f0ff; --brand:#66a3ff; --accent:#8bd0ff; --line:#1f2a44;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{opacity:.9;text-decoration:underline}
+    .wrap{max-width:1080px;margin:auto;padding:24px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .btn, .badge{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;
+      background:linear-gradient(180deg,#1b2740,#15233a);border:1px solid var(--line);color:var(--text);
+      transition:.2s ease; text-decoration:none; font-weight:600;
+    }
+    .btn:hover, .badge:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+    .btn.outline{background:transparent;border-color:#2b395c}
+    .title{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:.2px;margin:6px 0 10px}
+    .muted{color:var(--muted)}
+    .section{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+    .stack{display:flex;flex-direction:column;gap:12px}
+    .card{
+      background:linear-gradient(180deg,#141f35,#0f1a2e);
+      border:1px solid var(--line); border-radius:16px; padding:18px;
+      box-shadow:0 8px 30px rgba(0,0,0,.25);
+    }
+    .row{display:flex;flex-wrap:wrap;gap:10px}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .copy{cursor:pointer}
+    footer{margin-top:28px;padding-top:18px;border-top:1px dashed var(--line);color:var(--muted);text-align:center}
+
+    @media (max-width:880px){
+      .section{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .wrap{padding:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="title" style="margin:0">HealAid Chain</div>
+      <nav>
+        <a class="btn outline" href="#security">Security</a>
+        <a class="btn" href="https://app.uniswap.org/#/swap?outputCurrency=0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">Uniswap</a>
+        <a class="btn" href="https://healaidchain.gitbook.io/healaidchain-docs/" target="_blank" rel="noopener">Whitepaper</a>
+      </nav>
+    </header>
+
+    <!-- HERO / INTRO -->
+    <section class="section">
+      <div class="card stack">
+        <div class="muted">A charity-driven ERC-20 project</div>
+        <h1 class="title">Build Hope with <span style="color:#93c5fd">$HLAID</span></h1>
+        <p class="muted">
+          <b>LP locked until Feb 2026</b> via Team Finance.
+          Trade on Uniswap, follow our official channels, and read the whitepaper for details.
+        </p>
+        <div class="row">
+          <a class="btn" href="https://www.dextools.io/app/en/ether/pair-explorer/0x9e6c9e9f17c397c896de36988a81a57c9ba4ca82b6072a5700e59e3afab39c09" target="_blank" rel="noopener">View on DEXTools</a>
+          <a class="btn outline" href="https://www.geckoterminal.com/ko/eth/pools/0x9e6c9e9f17c397c896de36988a81a57c9ba4ca82b6072a5700e59e3afab39c09" target="_blank" rel="noopener">GeckoTerminal</a>
+        </div>
+
+        <div class="card" style="background:#0f1a2e;border:1px dashed var(--line)">
+          <div class="muted">
+            🔒 LP locked via Team Finance —
+            <a href="https://app.team.finance/lp-lock/0x10d5c22db75f49bceff8c8e631dc303b6c4b8c1a" target="_blank" rel="noopener">Proof link</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTRACT PANEL -->
+      <div class="card stack">
+        <div class="muted">Smart Contract (ERC-20) • Decimals 18</div>
+        <div class="mono" id="addr" style="font-size:14px;background:#0b162a;border:1px solid #223255;padding:12px;border-radius:12px">
+          0x6a772b38C41DeDE3BE0caE381E0E687648179a8
+        </div>
+        <div class="row">
+          <a class="badge copy" onclick="copyAddr()">📋 Copy</a>
+          <a class="badge" href="https://etherscan.io/token/0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">🔎 View on Etherscan</a>
+          <a class="badge" href="https://app.uniswap.org/#/swap?outputCurrency=0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">💱 Trade on Uniswap</a>
+          <a class="badge" href="https://app.uniswap.org/#/add/ETH/0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">💧 Add Liquidity</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY SECTION -->
+    <section id="security" class="card" style="margin-top:16px">
+      <h3 style="margin:0 0 8px">Security & Transparency</h3>
+      <ul class="muted" style="margin:0 0 4px 18px">
+        <li>LP locked until February 2026 (Team Finance).</li>
+        <li>Open contract address & public LP proof link.</li>
+        <li>DEX analytics on DEXTools & GeckoTerminal.</li>
+      </ul>
+    </section>
+
+    <!-- SOCIAL LINKS (inside body, before footer) -->
+    <section class="section" style="text-align:center; margin-top:40px;">
+      <div class="card" style="grid-column:1/-1">
+        <h2 style="color:#fff;margin:0 0 12px;">Follow HealAid Chain</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+          <a href="https://x.com/HLAIDTN/status/1953438207783129577" target="_blank" rel="noopener" class="btn">Twitter / X</a>
+          <a href="https://www.instagram.com/healaidchain?igsh=dHIyMzBrancybDBu" target="_blank" rel="noopener" class="btn">Instagram</a>
+          <a href="https://www.threads.com/@healaidchain" target="_blank" rel="noopener" class="btn">Threads</a>
+          <a href="https://open.kakao.com/o/gZ1HnDJh" target="_blank" rel="noopener" class="btn">KakaoTalk</a>
+          <a href="https://t.me/healaidchainofficial" target="_blank" rel="noopener" class="btn">Telegram</a>
+          <a href="https://youtube.com/@hlaid_official?si=D6PA-kkujd2mVczW" target="_blank" rel="noopener" class="btn">YouTube</a>
+          <a href="https://healaidchain.github.io/" target="_blank" rel="noopener" class="btn">Official Website</a>
+          <a href="https://healaidchain.gitbook.io/healaidchain-docs/" target="_blank" rel="noopener" class="btn">Whitepaper</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="muted">© HealAid Chain — Together for better care.</footer>
+  </div>
+
+  <script>
+    function copyAddr(){
+      const addr = "0x6a772b38C41DeDE3BE0caE381E0E687648179a8";
+      navigator.clipboard.writeText(addr).then(()=>alert("Contract address copied!"));
+    }
+  </script>
+</body>
+</html>
