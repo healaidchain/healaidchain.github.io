@@ -1,154 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HealAid Chain (HLAID)</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #121212;
-      color: #f0f0f0;
-    }
-    header {
-      background: #4CAF50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    #loader {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #121212;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: #4CAF50;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #4CAF50;
-    }
-    a.button, button.copy-btn, button.lang-toggle {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #4CAF50;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      cursor: pointer;
-      border: none;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealAid Chain</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="initPage()">
-  <div id="loader">Loading...</div>
+<body>
 
-  <header>
-    <h1 id="title">HealAid Chain (HLAID)</h1>
-    <p id="slogan">Blockchain for cancer support and charity</p>
-    <button class="lang-toggle" onclick="toggleLang()">🌐 Change Language</button>
-  </header>
+<!-- HEADER -->
+<header>
+    <nav>
+        <a href="#security">Security</a>
+        <a href="https://app.uniswap.org/#/swap?outputCurrency=0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">Uniswap</a>
+        <a class="btn" href="https://healaidchain.gitbook.io/healaidchain-docs/" target="_blank" rel="noopener">Whitepaper</a>
+    </nav>
+</header>
 
-  <section>
-    <h2 id="overview_title">Project Overview</h2>
-    <p id="overview_text">HealAid Chain is a blockchain project supporting cancer patients and charity at the same time.</p>
-    
-    <h3>Tokenomics</h3>
-    <p>Total Supply: 1,000,000 HLAID<br>Tax: 3% Buy / 3% Sell</p>
+<!-- HERO -->
+<section class="hero section">
+    <div class="card">
+        <h1 style="margin:2rem 0 1rem 0">Build Hope with <span style="color:#93c5fd">$HLAID</span></h1>
+        <p class="small" style="max-width:86ch">
+            Charity-driven ERC-20 project. <b>LP locked until Feb 2026</b> via Team Finance.<br>
+            Trade on Uniswap, follow our official channels, and read the whitepaper for details.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+            <a class="btn" href="https://www.dextools.io/app/en/ether/pair-explorer/0x9e6c9e9f17c397c896de36988a81a57c9ba4ca82b6072a5700e59e3afab39c09" target="_blank" rel="noopener">View on DEXTools</a>
+            <a class="btn outline" href="https://www.geckoterminal.com/ko/eth/pools/0x9e6c9e9f17c397c896de36988a81a57c9ba4ca82b6072a5700e59e3afab39c09" target="_blank" rel="noopener">GeckoTerminal</a>
+        </div>
+    </div>
 
-    <h3>Roadmap</h3>
-    <ul>
-      <li>✅ Presale completed</li>
-      <li>✅ Uniswap Listing</li>
-      <li>✅ CoinMarketCap / CoinGecko listing pending</li>
-      <li>🚧 Community growth ongoing</li>
-    </ul>
+    <div class="card">
+        <p class="small" style="margin-top:8px">
+            LP locked via Team Finance — 
+            <a href="https://app.team.finance/lp-lock/0x1d05c22db7549fbceff8c8e631dc33b6c4b8c1a" target="_blank" rel="noopener">Proof link</a>
+        </p>
+    </div>
+</section>
 
-    <h3>Links</h3>
-    <a class="button" href="https://healaidchain.gitbook.io" target="_blank">📄 Whitepaper</a>
-    <a class="button" href="https://app.uniswap.org/swap?outputCurrency=0x10d5c22db75f49bceff8c8e631dc303b6c4b8c1a" target="_blank">💱 Uniswap</a>
-    <a class="button" href="https://t.me/healaidchainofficial" target="_blank">📢 Telegram</a>
-    <a class="button" href="https://x.com/HLAIDTN/status/1953438207783129577" target="_blank">🐦 Twitter</a>
-    <a class="button" href="https://www.dextools.io/app/en/ether/pair-explorer/0x8d3dc250b754f5987ccf3f563b863d1f9e34e3b6" target="_blank">📊 DEXTools</a>
-    <button class="copy-btn" onclick="navigator.clipboard.writeText('0x10d5c22db75f49bceff8c8e631dc303b6c4b8c1a')">📋 Copy Contract</button>
-    <p id="price">💲 HLAID Price: Loading...</p>
-  </section>
+<!-- CONTRACT -->
+<section id="contract" class="section card">
+    <h2 style="margin-top:0">Smart Contract</h2>
+    <p class="small">Chain: Ethereum (ERC-20) | Decimals: 18</p>
+    <div style="margin-top:10px">
+        <div class="mono" id="addr">0x6a772b38C41DeDE3BE0caE381E0E687648179a8</div>
+        <button class="copy" onclick="copyAddr()">Copy</button>
+    </div>
+    <div class="grid cols-3" style="margin-top:16px">
+        <a class="badge" href="https://etherscan.io/token/0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">📄 View on Etherscan</a>
+        <a class="badge" href="https://app.uniswap.org/#/swap?outputCurrency=0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">💱 Trade on Uniswap</a>
+        <a class="badge" href="https://app.uniswap.org/#/add/ETH/0x6a772b38C41DeDE3BE0caE381E0E687648179a8" target="_blank" rel="noopener">💧 Add Liquidity</a>
+    </div>
+</section>
 
-  <section>
-    <h2>📨 Subscribe</h2>
-    <input type="email" placeholder="Enter your email here" />
-    <button class="button">Subscribe</button>
-  </section>
+<script>
+function copyAddr() {
+    navigator.clipboard.writeText('0x6a772b38C41DeDE3BE0caE381E0E687648179a8');
+    alert('Contract address copied!');
+}
+</script>
 
-  <section>
-    <h2>🧑‍💼 Our Team</h2>
-    <ul>
-      <li>🧠 Smart Contract Dev Group</li>
-      <li>🎨 UI/UX Designer Group</li>
-      <li>📣 SMS & PR Team</li>
-    </ul>
-  </section>
-
-  <section class="faq">
-    <h2>🧾 FAQ</h2>
-    <h3>Q. Where can I buy HLAID?</h3>
-    <p>A. You can purchase it on Uniswap.</p>
-    <h3>Q. What's the mission?</h3>
-    <p>A. Supporting cancer patients through blockchain donations.</p>
-    <h3>Q. Is this a real charity?</h3>
-    <p>A. Yes, we are planning legal registration for transparency.</p>
-  </section>
-
-  <section class="gallery">
-    <h2>📸 Gallery</h2>
-    <img src="https://via.placeholder.com/180x100?text=Logo" alt="Gallery 1"/>
-    <img src="https://via.placeholder.com/180x100?text=Event" alt="Gallery 2"/>
-    <img src="https://via.placeholder.com/180x100?text=Launch" alt="Gallery 3"/>
-  </section>
-
-  <footer>
-    © 2025 HealAid Chain. All rights reserved.
-  </footer>
-
-  <script>
-    function initPage() {
-      document.getElementById("loader").style.display = "none";
-      fetch("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd")
-        .then(res => res.json())
-        .then(data => {
-          const ethPrice = data.ethereum.usd;
-          const hlaPrice = (ethPrice * 0.0000881).toFixed(5);
-          document.getElementById("price").innerText = "💲 HLAID Price: $" + hlaPrice;
-        })
-        .catch(() => {
-          document.getElementById("price").innerText = "💲 HLAID Price: Error loading data";
-        });
-    }
-
-    function toggleLang() {
-      const isEn = document.getElementById("title").innerText.includes("HealAid");
-      document.getElementById("title").innerText = isEn ? "힐에이드 체인 (HLAID)" : "HealAid Chain (HLAID)";
-      document.getElementById("slogan").innerText = isEn ? "블록체인을 통한 암환자 후원 및 자선 프로젝트" : "Blockchain for cancer support and charity";
-      document.getElementById("overview_title").innerText = isEn ? "프로젝트 개요" : "Project Overview";
-      document.getElementById("overview_text").innerText = isEn ? "HealAid Chain은 블록체인을 기반으로 암환자 지원과 자선 목적을 동시에 달성하는 프로젝트입니다." : "HealAid Chain is a blockchain project supporting cancer patients and charity at the same time.";
-    }
-  </script>
 </body>
 </html>
